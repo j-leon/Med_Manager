@@ -13,6 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.jleon.medmanager.core.db.AppDatabase;
 import com.jleon.medmanager.databinding.ActivityMainBinding;
 
 import android.view.Menu;
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        AppDatabase db = ((MedicineApplication) getApplicationContext()).APP_DB;
     }
 
     @Override
